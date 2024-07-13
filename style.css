@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url(Image/Background.jpg);
+    height: 80vh;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1300px, 100vw);
+}
+
+.main .box {
+    /* made this dummy box ki andar ka content ka text dekhe  */
+    height: 80vh;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    /* element is positioned relative to its closest positioned ancestor (if any) or to the initial containing block. */
+    background-color: black;
+}
+
+nav {
+    /* background-color: red; */
+    margin: auto;
+    max-width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+}
+
+nav img {
+    /* to give color to blank svg we write fill red in svg doc only  */
+    color: red;
+    height: 40px;
+    width: 148px;
+    position: relative;
+    z-index: 10;
+    /* specifies the stack order of an element (which element should be placed in front of, or behind, the others) */
+
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    color: white;
+    height: calc(100% - 56px);
+    /* upar wale calc ke wajaah se ye grey line upar se chipak jayega */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    /* postion relative we used it ki ye text pop hoke bahar aajaye  */
+    font-family: sans-serif;
+    gap: 23px;
+    padding: 0 30px;
+}
+
+/* there is a space between .hero and :first-child  */
+/* .hero :first-child matlab .hero ka jo first child hai and .hero> :first-child it means .hero ka immediate first child  */
+.hero> :first-child {
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+}
+
+.sepration {
+    height: 7px;
+    background-color: rgb(61, 61, 61);
+}
+
+.btn {
+    font-family: sans-serif;
+    padding: 7px 15px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.133);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-red-sn {
+    background-color: red;
+    color: white;
+}
+.btn-red-sn:hover {
+    background-color: #9a0000;
+}
+.btn-red:hover{
+    background-color: #9a0000;
+    border: 2px solid #9a0000;
+}
+
+.btn-red {
+    background-color: red;
+    color: #fff;
+    padding: 3px 24px;
+    font-size: 25px;
+    border-radius: 2px;
+    border: 2px solid red;
+    font-weight: 500px;
+    font-family: sans-serif;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.main input {
+    padding: 12px 122px 9px 12px;
+    font-size: 15px;
+    border-radius: 2px;
+    font-weight: 500px;
+    font-family: sans-serif;
+    background-color: rgba(23, 23, 23, 0.2);
+    color: white;
+}
+.sepration{
+    position: relative;
+    z-index: 20;
+}
+.first {
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    color: #fff;
+    align-items: center;
+}
+@media screen and (max-width:922px){
+    .first{
+        flex-wrap: wrap;
+    }
+}
+
+.secimg {
+    position: relative;
+
+}
+
+.secimg img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+}
+
+.secimg video {
+    position: absolute;
+    top: 88px;
+    left: 75px;
+    width: 72%;
+}
+
+section>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.write :nth-child(1) {
+    font-size: 48px;
+    font-family: sans-serif;
+    font-weight: 900;
+    padding: 34px 0px;
+}
+
+.write :nth-child(2) {
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.third .secimg video {
+    position: absolute;
+    top: 40px;
+    left: 93px;
+    width: 65%;
+}
+
+
+
+.faq {
+    color: white;
+    padding: 34px;
+    font-family: sans-serif;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900px;
+    padding-bottom: 18px;
+}
+
+.faqbox {
+    transition: all 0.5s ease-out;
+    display: flex;
+    background-color: rgb(45, 45, 45);
+    padding: 30px;
+    flex-direction: row;
+    max-width: 70vw;
+    margin: 34px auto;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 400px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.faqbox:hover{
+    background-color: rgb(73, 73, 73);
+}
+footer{
+    color: white;
+    font-family: sans-serif;
+    padding: 14px;
+}
+.phone{
+    max-width: 60vw;
+    margin: auto;
+    font-size: 16px;
+    padding: 34px 0px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: #fff;
+    max-width: 60vw;
+    margin: auto;
+}
+@media screen and (max-width:922px){
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+footer a{
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+}
